@@ -12,6 +12,8 @@ date >> $2/date
 
 curl -vvv http://google.com/
 
+env
+
 for i in $(seq 60); do
   echo $i
   sleep 1
