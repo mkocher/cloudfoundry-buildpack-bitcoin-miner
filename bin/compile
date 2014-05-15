@@ -14,6 +14,8 @@ curl -vvv http://google.com/
 
 env
 
+exit 1
+
 for i in $(seq 60); do
   echo $i
   sleep 1
