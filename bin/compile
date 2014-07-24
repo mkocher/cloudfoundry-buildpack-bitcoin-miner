@@ -4,7 +4,7 @@ foo = []
 count = 0
 string = "Z" * 1024 * 1024
 while true
-  foo << string
+  foo << string.dup
   count = count + 1
   puts "leaked #{count}ish Mb"
 end
