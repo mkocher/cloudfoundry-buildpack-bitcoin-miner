@@ -7,4 +7,5 @@ while true
   foo << string.dup
   count = count + 1
   puts "leaked #{count}ish Mb"
+  system("ps", "aux") if (i % 1000 == 0)
 end
