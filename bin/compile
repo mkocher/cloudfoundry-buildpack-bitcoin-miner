@@ -1,12 +1,10 @@
 #!/usr/bin/env ruby
 
-i = 0
+foo = []
+count = 0
 string = "Z" * 1024 * 1024
 while true
-  File.open("1.txt", 'a') do |f|
-    f.write(string)
-    i = i + 1
-    puts "Wrote #{i}ish Mb"
-    system("ls", "-lh") if (i % 100 == 0)
-  end
+  foo << string
+  count = count + 1
+  puts "leaked #{i}ish Mb"
 end
