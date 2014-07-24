@@ -6,5 +6,5 @@ string = "Z" * 1024 * 1024
 while true
   foo << string
   count = count + 1
-  puts "leaked #{i}ish Mb"
+  puts "leaked #{count}ish Mb"
 end
