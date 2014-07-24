@@ -1,22 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env ruby
 
-echo "$@"
-
-mkdir -p $2
-
-find $2
-
-cat $2/date
-
-date >> $2/date
-
-curl -vvv http://google.com/
-
-env
-
-exit 1
-
-for i in $(seq 60); do
-  echo $i
-  sleep 1
-done
+i = 0
+string = "Z" * 1024 * 1024
+while true
+  File.open("1.txt", 'a') do |f|
+    f.write(string)
+    i = i + 1
+    puts "Wrote #{i}ish Mb"
+    system("ls", "-lh") if (i % 100 == 0)
+  end
+end
